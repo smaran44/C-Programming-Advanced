@@ -35,7 +35,7 @@ int main() {
     printf("Value of f = %f\n", *(float *)ptr);
 
     ptr = &d;
-    printf("Value of d = %lf\n", *(double *)ptr);
+    printf("Value of d = %lf\n", *(double *)ptr);//lf is used to read double data type.
     
     ptr = &ch;
     printf("Value of ch = %c\n", *(char *)ptr);
