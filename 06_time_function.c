@@ -7,14 +7,7 @@ int main() {
     //time_t *t: This is a pointer to a time_t variable. If it's not NULL, the function will store the current time in the variable pointed to by t.
     // Get the current time
     currentTime = time(&currentTime);  // or time(NULL);
-    
-    if (currentTime == -1) {
-        printf("Error retrieving the time\n");
-        return 1;// return 1 used to indicate an error occurred in the program.
-    }
 
-//Return Value:
-//The function returns the number of seconds since the epoch (as a time_t value). If there is an error, it returns -1.
 
     // Print the current time in seconds since the epoch
     printf("Current time: %ld seconds since the epoch\n", currentTime);
