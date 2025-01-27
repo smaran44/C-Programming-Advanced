@@ -1,0 +1,1 @@
+// pointer can be incrimented or decrimented
