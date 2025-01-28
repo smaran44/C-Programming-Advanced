@@ -46,6 +46,19 @@ int main() {
     printf("Comparison result between 'hhhb' and 'hhha': %d\n", comparison2);
     printf("Comparison result between 'hhh' and 'hhh': %d\n", comparison3);
 
-   
+    //The function strcspn stands for string complement span.
+    // It is used to find the index of the first occurrence of any character from a set of characters in a string.
+    //strcspn returns the number of characters from the start of str1 before any character from str2 is found. 
+    //If no characters from str2 are found, it returns the length of str1.
+    // **Demonstrating strcspn (String Complement Span)**
+    
+    char str7[] = "Hello, World!";
+    char set[] = ","; 
+    char set1[] = "r";
+    int index = strcspn(str7, set); // Find the index of the first occurrence of any character from `set` in `str`
+    printf("Index of the first occurrence of %c from the set in the string: %d\n", set[0] ,index);
+    int index1 = strcspn(str7, set1); // Find the index of the first occurrence of any character from `set` in `str`
+    printf("Index of the first occurrence of %c from the set in the string: %d\n", set1[0] ,index1);
+
     return 0;
 }
