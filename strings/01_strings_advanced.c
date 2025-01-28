@@ -3,8 +3,10 @@
 
 int main() {
     // Declaration of string variables
-    char name[] = "Shradha Khapra"; // Declared and initialized with a string literal
-    char course[] = {'a', 'p', 'n', 'a', ' ', 'c', 'o', 'l', 'l', 'e', 'g', 'e', '\0'}; // Declared as a character array with null terminator
+    char name[] = "Smaran Yanapu"; // Declared and initialized with a string literal
+    char course[] = {'s', 't', 'r', 'i', 'n', 'g', 's', ' ', 'a', 'd', 'v', '\0'}; // Declared as a character array with null terminator
+    printf("Name: %s\n", name);
+    printf("Course: %s\n", course);
 
     // Printing string using a loop
     printf("Printing string using a loop:\n");
@@ -37,11 +39,15 @@ int main() {
     printf("Your full name (scanf) is: %s\n", fullName);
 
     // Taking multi-word input using fgets and displaying it with puts
+    char _fullName[40]; 
     printf("Enter full name (fgets): ");
-    getchar(); // Clear the newline left by the previous input
-    fgets(fullName, 40, stdin); // Reads the full line including spaces
+    scanf("%s", _fullName);
+    fgets(_fullName, 40, stdin); // Reads the full line including spaces
+    //stdin is a file pointer that points to the standard input stream (usually the keyboard)
     printf("Your full name (fgets) is: ");
-    puts(fullName); // Prints the string followed by a newline
+    puts(_fullName); 
+    //puts() function is used to display strings on the console. It automatically appends a newline character at the end of the string.
+    //without puts() function, we would have to manually add a newline character to print the string on a new line.
 
     // Demonstrating string library functions
     char shortName[] = "Shradha";
@@ -54,9 +60,13 @@ int main() {
     printf("Copied string: ");
     puts(newVal);
 
-    char firstStr[50] = "Hello ";
+    char firstStr[50] = "Hello ";//first string should be large enough to hold the concatenated string
+    //so we can't use char firstStr[5] = "Hello "; as it will not be able to hold the concatenated string
+    //so first string should be greater than or equal to the sum of the lengths of the two strings
+    //thats why we have used char firstStr[50] = "Hello ";
     char secStr[] = "World";
     strcat(firstStr, secStr); // Concatenates secStr to firstStr
+
     printf("Concatenated string: ");
     puts(firstStr);
 
