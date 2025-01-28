@@ -16,5 +16,8 @@ int main() {
 
     struct student *ptr = &s1;
     printf("Student Name: %s\nStudent Roll Number: %d\nStudent CGPA: %.2f\n", (*ptr).name, (*ptr).roll_number, (*ptr).cgpa);
+
+    //arrow operator
+    printf("Student Name: %s\nStudent Roll Number: %d\nStudent CGPA: %.2f\n", ptr->name, ptr->roll_number, ptr->cgpa);
     return 0;
 }
