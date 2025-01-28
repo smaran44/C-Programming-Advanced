@@ -4,7 +4,7 @@
 int main() {
     // **Demonstrating strlen (String Length)**
     // Declare a string and calculate its length
-    char shortName[] = "Shradha";
+    char shortName[] = "Smaran";
     int length = strlen(shortName); // `strlen` calculates the number of characters in the string (excluding the null terminator)
     printf("The length of the name is: %d\n", length);
 
@@ -29,30 +29,23 @@ int main() {
     // Compare two strings lexicographically (dictionary order)
     char str1[] = "Apple";
     char str2[] = "Banana";
-    int comparison = strcmp(str1, str2); 
+    int comparison1 = strcmp(str1, str2); 
     // `strcmp` returns:
     // < 0 if str1 < str2, 
     // 0 if str1 == str2,
     // > 0 if str1 > str2
-    printf("Comparison result between 'Apple' and 'Banana': %d\n", comparison);
+    // A-B is returned where A and B are ASCII values of the first non-matching characters
+    char str3[] = "hhhb";
+    char str4[] = "hhha";
+    int comparison2 = strcmp(str3, str4); 
 
-    // **Reading a String Character by Character**
-    // Prompt the user to enter a string one character at a time
-    printf("Enter a string character by character (press Enter to stop): ");
-    char str[100]; // Array to store the input string
-    char ch;       // Variable to hold each character
-    int i = 0;     // Index for the array
+    char str5[] = "hhh";
+    char str6[] = "hhh";
+    int comparison3 = strcmp(str5, str6); 
+    printf("Comparison result between 'Apple' and 'Banana': %d\n", comparison1);
+    printf("Comparison result between 'hhhb' and 'hhha': %d\n", comparison2);
+    printf("Comparison result between 'hhh' and 'hhh': %d\n", comparison3);
 
-    // Read characters until a newline (`\n`) is encountered
-    while ((ch = getchar()) != '\n') {
-        str[i] = ch; // Store each character in the array
-        i++;         // Increment the index
-    }
-    str[i] = '\0'; // Null-terminate the string to mark its end
-
-    // Print the entered string
-    printf("Entered string: ");
-    puts(str); // Print the string
-
+   
     return 0;
 }
