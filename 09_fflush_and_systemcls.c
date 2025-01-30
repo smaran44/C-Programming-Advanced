@@ -22,3 +22,8 @@ int main() {
 
     return 0;
 }
+/*fflush(stdin) is not reliable for clearing input. A safer way is:
+int c;
+while ((c = getchar()) != '\n' && c != EOF);  // Clear input buffer*/
+
+// but for output buffer we can only use fflush(stdout)
