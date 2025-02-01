@@ -33,6 +33,8 @@ void get_password(char *password, int max_length) {
             password[i] = '\0'; // Null-terminate the password string
             break; 
         }
+        // if this is not there when we press enter it will also go into password
+
         // If the user presses 'Backspace' (ASCII 8), handle deletion
         else if (ch == 8) { 
             if (i > 0) {  // Ensure there are characters to delete
@@ -40,6 +42,8 @@ void get_password(char *password, int max_length) {
                 printf("\b \b"); // Move cursor back, erase character, move back again
             }
         }
+        // if this is not there when we press backspace it will also go into password
+
         // If the user types a valid character (within max length), store it
         else if (i < max_length - 1) { 
             password[i++] = ch;  // Store the character
