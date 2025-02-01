@@ -2,25 +2,27 @@
 
 int main() {
     FILE *fptr;
+    char data[] = "This is a new line of text to append to the file.\n";
 
-    // Open the file "NewFile.txt" in write mode
-    fptr = fopen("fputc.txt", "w");
+    // Open the file "Test.txt" in append mode
+    fptr = fopen("Test.txt", "a+");
 
-    // Write individual characters to the file
-    fputc('F', fptr);
-    fputc('P', fptr);
-    fputc('U', fptr);
-    fputc('T', fptr);
-    fputc('C', fptr);
+    // Check if the file was opened successfully
+    if (fptr == NULL) {
+        printf("Error opening the file!\n");
+        return 1;
+    }
 
-    fputs("\nhello", fptr);
+    // Write data to the file
+    fputs(data, fptr);
 
     // Close the file
     fclose(fptr);
 
+    printf("Data has been appended to the file successfully!\n");
+
     return 0;
 }
-
 /*No, fputs and fputc are not the same, although they are both used to write data to a file. Here's how they differ:
 
 fputs()
