@@ -59,8 +59,5 @@ Contributions are welcome! Feel free to submit pull requests or suggest improvem
 ## ⭐ Show Your Support
 If you find this repository helpful, give it a **star** ⭐ on GitHub!
 
-## 📩 Contact
-For any queries, feel free to reach out via GitHub issues.
-
 Happy Coding! 🚀
 
