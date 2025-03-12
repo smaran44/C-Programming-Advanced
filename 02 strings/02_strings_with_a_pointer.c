@@ -8,6 +8,7 @@ int main() {
 
     // String initialized as a pointer
     char *str2 = "Hello";
+    printf("str2: %s\n", str2);
     // Reinitializing the string pointer
     str2 = "World";
 
